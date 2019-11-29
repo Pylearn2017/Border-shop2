@@ -1,0 +1,40 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.right {
+  border: 2px solid red;
+}
+
+.left {
+  border: 2px solid red;
+}
+
+.game-card__title {
+  font-size: 30px;
+}
+
+.game-card__price {
+  font-size: 35px;
+}
+
+.game-card__inStoke {
+  font-size: 18px;
+}
+
+.game-card_button__buy {
+  background-color: #33bd68;
+}
+
+.game-card_button__basket {
+  background-color: #ff0000;
+}
+
+.button {
+  margin-bottom: 15px;
+  display: block;
+  color: #fff;
+  font-size: 25px;
+  height: 50px;
+  width: 300px;
+}

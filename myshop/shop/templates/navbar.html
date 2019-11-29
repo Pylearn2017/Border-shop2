@@ -1,0 +1,61 @@
+  {% load static %}
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg  scrolling-navbar navbar-light need-hide" style="background-image: url('{% static 'img/hex0.jpg' %}');">
+    <div class="container">
+
+      <!-- Brand -->
+
+      <a class="navbar-brand waves-effect" href="/">
+        <strong class="white-text">🎲 ИГРОМАН</strong>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+        </ul>
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <div class="cart white-text">
+            {% with total_items=cart|length %}
+              {% if cart|length > 0 %}
+                В корзине:
+                <a href="{% url 'cart:cart_detail' %}">
+                  {{ total_items }} товар {{ total_items|pluralize }},
+                  ${{ cart.get_total_price }}
+                </a>
+                {% else %}
+                В корзине пусто
+              {% endif %}
+            {% endwith %}
+          </div>       
+<!--           <li class="nav-item">
+            <a href="https://www.facebook.com" class="nav-link waves-effect" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://instagram.com" class="nav-link waves-effect" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+         <li class="nav-item">
+            <a href="https://vk.com" class="nav-link waves-effect" target="_blank">
+              <i class="fab fa-vk"></i>
+            </a>
+          </li> -->
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
